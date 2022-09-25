@@ -1,3 +1,8 @@
+
+# SPDX-FileCopyrightText: 2022 Alec Delaney
+#
+# SPDX-License-Identifier: MIT
+
 [submodule "hardware"]
 	path = hardware
 	url = https://github.com/tekktrik/CircuitPythonukiah_HW.git
