@@ -1,0 +1,6 @@
+[submodule "hardware"]
+	path = hardware
+	url = https://github.com/tekktrik/CircuitPythonukiah_HW.git
+[submodule "software"]
+	path = software
+	url = https://github.com/tekktrik/CircuitPythonukiah_SW.git
