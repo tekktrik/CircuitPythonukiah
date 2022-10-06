@@ -30,7 +30,7 @@ jobs:
     - name: Commit submodule update
       uses: stefanzweifel/git-auto-commit-action@v4
       with:
-        commit_message: Updating ${{ github.event.client_payload.type }} submoduleFix
+        commit_message: Updating ${{ github.event.client_payload.type }} submodule
         branch: submodule-${{ github.event.client_payload.type }}-update-${{ github.event.client_payload.sha }}
         create_branch: true
     - name: Create pull request
