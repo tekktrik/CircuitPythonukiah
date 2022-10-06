@@ -14,7 +14,7 @@ jobs:
     steps:
     - name: Get and verify update type
       run: |
-        updatetype = "$${{ github.event.client_payload.type }}"
+        updatetype="$${{ github.event.client_payload.type }}"
         if [[ ${{ updatetype != "hardware" }} ]] || [[ updatetype != "software" ]]
         then
           echo "Update type must be either 'hardware' or 'software'"
