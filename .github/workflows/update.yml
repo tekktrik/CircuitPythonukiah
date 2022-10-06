@@ -26,7 +26,8 @@ jobs:
         submodules: true
     - name: Update specified submodule
       run: |
-        git submodule update --init --recursive --remote $updatetype
+        git submodule update --init --recursive
+        git submodule update --remote $updatetype
     - name: Commit submodule update
       uses: stefanzweifel/git-auto-commit-action@v4
       with:
