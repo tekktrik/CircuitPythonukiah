@@ -41,3 +41,4 @@ jobs:
         PULL_REQUEST_BRANCH: "main"
         PULL_REQUEST_FROM_BRANCH: submodule-${{ github.event.client_payload.type }}-update-${{ github.event.client_payload.sha }}
         PULL_REQUEST_TITLE: Update ${{ github.event.client_payload.type }} module
+        PULL_REQUEST_BODY: Automatic PR to update the ${{ github.event.client_payload.type }} submodule
