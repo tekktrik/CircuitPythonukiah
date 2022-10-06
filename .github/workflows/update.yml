@@ -1,0 +1,41 @@
+# SPDX-FileCopyrightText: 2022 Alec Delaney
+#
+# SPDX-License-Identifier: MIT
+
+name: Update submodules
+
+on:
+  repository_dispatch:
+    types: [update-submodule]
+
+jobs:
+  update-submodule:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Get and verify update type
+      run: |
+        updatetype = "$${{ github.event.client_payload.type }}"
+        if [[ ${{ updatetype != "hardware" }} ]] || [[ updatetype != "software" ]]
+        then
+          echo "Update type must be either 'hardware' or 'software'"
+          exit 1
+        fi
+    - name: Checkout current repo
+      uses: actions/checkout@v3
+      with:
+        submodules: true
+    - name: Update specified submodule
+      run: |
+        git submodule update --init --recursive --remote $updatetype
+    - name: Commit submodule update
+      uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: Updating ${{ github.event.client_payload.type }} submodule
+        branch: submodule-${{ github.event.client_payload.type }}-update-${{ github.event.client_payload.sha }}
+    - name: Create pull request
+      uses: vsoch/pull-request-action@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.HELPER_BOT_TOKEN }}
+        PULL_REQUEST_BRANCH: "main"
+        PULL_REQUEST_FROM_BRANCH: submodule-${{ github.event.client_payload.type }}-update-${{ github.event.client_payload.sha }}
+        PULL_REQUEST_TITLE: Update ${{ github.event.client_payload.type }} module
