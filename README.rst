@@ -45,7 +45,10 @@ Notice that everything is wrapped in quotation marks and that many lines end
 with a comma.  Make sure that you keep it like that, or the CircuitPythonukiah
 won't function properly!
 
-After saving this file with your information, you can unplug from the
+Additionally, there is a file named ``settings.py`` that contains optional
+settings you can configure.  See the section below for what these settings do.
+
+After saving these file with your information, you can unplug from the
 microcontroller and use the USB C cable to plug into the back of the
 CircuitPythonukiah and connect the other end of the cable to a power source,
 such as a common USB charger brick.
@@ -59,6 +62,9 @@ LED candles go out 12 hours after lighting, to simulate the behavior of regular
 candles.  This will also let you watch the CircuitPythonukiah fully light up
 the following night.  If this setting is off, the candles will stay on until
 the next candle light, at which point another LED will turn on.
+
+To change this settings, change the line to ``BURNOUT = True`` or
+``BURNOUT = False`` accordingly.  Please note the specific capitalization!
 
 Functionality
 -------------
