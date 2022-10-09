@@ -63,8 +63,15 @@ candles.  This will also let you watch the CircuitPythonukiah fully light up
 the following night.  If this setting is off, the candles will stay on until
 the next candle light, at which point another LED will turn on.
 
-To change this settings, change the line to ``BURNOUT = True`` or
-``BURNOUT = False`` accordingly.  Please note the specific capitalization!
+To change this settings, change the line to either:
+
+``BURNOUT = True``
+
+or
+
+``BURNOUT = False``
+
+Please note the specific capitalization!
 
 Functionality
 -------------
