@@ -10,7 +10,9 @@ Setting up the CircuitPythonukiah is simple!  Using a Mirco USB C cable, plug in
 the microcontroller board (the square board on the front) and connect it to your
 computer.  The device will show up as a USB drive labelled ``CIRCUITPY``.  In this
 folder you'll find a file named ``secrets.py``, in which you'll need to add a few
-pieces of information.  The first is your Wi-Fi name and password, which the
+pieces of information.
+
+The first is your Wi-Fi name and password, which the
 CircuitPythonukiah will need to connect to your network.  The other pieec of
 information is your ZIP code, which is needed in order to grab the candle lighting
 times for your location.  An example of this filled out looks like this:
@@ -69,22 +71,25 @@ information is correct.  Additionally, try unplug and reconnecting the
 CircuitPythonukiah to the power source to have it retry the connection.
 
 If conenction is successful, the CircuitPythonukiah should immediately begin
-operating based on the current time relative to candle light.  If it is before
-the start of the first Hanukkah light time the device will not light up any
-LEDs until it's time, at which point the shamash LED and first candle will
-turn on, accompanied by a small rendition of "Maoz Tzur" depending on your
-mute sound settings.  If the device is plugged in during the holiday within 12
-hours of candle lighting time, it will immediately light up and play the song
-depending on your mute sound settings.  If you plug it in between the end of
-this time and the next candle lighting time (so, 12 hours before a candle
-lighting), the device will do anything until the next candle lighting.
+operating based on the current time relative to candle light.
 
-After the holiday (12 hours after candle light for "burnout" mode or 24 hours
-otherwise) the menorah will turn off all the LEDs and just pause forever.
-This means you MUST replug it in every year,  It is worth mentioning that
-it currently finds the candle lighting times for the current calendar year,
-which means the earliest you can plug it in and expect it to function
-properly is January.  Hence, I recommend that like your other hanukkiahs
+* If it is before the start of the first Hanukkah light time the device will not
+  light up any LEDs until it's time, at which point the shamash LED and first
+  candle will turn on, accompanied by a small rendition of "Maoz Tzur" depending
+  on your sound muting settings.
+* If the device is plugged in during the holiday within 12 hours of candle
+  lighting time, it will immediately light up and play the song depending on
+  your sound muting settings.
+* If you plug it in between the end of this time and the next candle lighting
+  time (so, 12 hours before a candle lighting), the device will do anything
+  until the next candle lighting.
+* After the holiday (12 hours after candle light for "burnout" mode or 24 hours
+  otherwise) all the LEDs will turn off and remain as such forever. This means
+  you MUST replug it in every year.
+
+It is worth mentioning that it currently finds the candle lighting times for the
+current calendar year, which means the earliest you can plug it in and expect it
+to function properly is January.  Hence, I recommend that like your other hanukkiahs
 you only bring it out just for the holiday and unplug and store it otherwise.
 
 Troubleshooting
