@@ -1,6 +1,10 @@
 CircuitPythonukiah
 ==================
 
+.. image:: https://img.shields.io/badge/OSHWA-US002130-blue
+   :target: https://certification.oshwa.org/us002130.html
+   :alt: OSHWA Certified
+
 The CircuitPythonukiah project
 
 Setup
