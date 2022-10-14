@@ -136,6 +136,6 @@ the public project repositories, and while I am not a lawyer, essentially:
 
 * Do what you want with this!
 * You can share these designs and code or any modifications!
-* If you do share, please share it with the same licensing as open source!
+* If you do use or share this, share it with the same licensing!
 
 This is to ensure that the project remains perpetually open source.
