@@ -5,6 +5,10 @@ CircuitPythonukiah
    :target: https://certification.oshwa.org/us002130.html
    :alt: OSHWA Certified
 
+.. image:: https://img.shields.io/maintenance/yes/2022
+   :target: https://github.com/tekktrik/CircuitPythonukiah/issues
+   :alt: Maintained
+
 The CircuitPythonukiah project
 
 Setup
