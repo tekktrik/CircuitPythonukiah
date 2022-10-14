@@ -1,6 +1,10 @@
 CircuitPythonukiah
 ==================
 
+.. image:: https://img.shields.io/github/workflow/status/tekktrik/CircuitPythonukiah/Build%20CI/main
+   :target:  https://github.com/tekktrik/CircuitPythonukiah/actions
+   :alt: Build CI status (main branch)
+
 .. image:: https://img.shields.io/badge/OSHWA-US002130-blue
    :target: https://certification.oshwa.org/us002130.html
    :alt: OSHWA Certified
