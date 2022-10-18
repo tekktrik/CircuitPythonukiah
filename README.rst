@@ -68,14 +68,15 @@ such as a common USB charger brick.
 Configurable Settings
 ---------------------
 
-The CircuitPythonukiah currently has one configurable setting called "burnout".
-This setting controls the behavior of the device with respect to letting the
-LED candles go out 12 hours after lighting, to simulate the behavior of regular
-candles.  This will also let you watch the CircuitPythonukiah fully light up
-the following night.  If this setting is off, the candles will stay on until
-the next candle light, at which point another LED will turn on.
+The CircuitPythonukiah currently has two configurable settings relating to
+"burnout". This setting controls the behavior of the device with respect to
+letting the LED candles go out after an amount of time to simulate the behavior
+of regular candles.  This will also let you watch the CircuitPythonukiah fully
+light up the following night.  If this setting is off, the candles will stay on
+until the next candle light, at which point another LED will turn on.
 
-To change this settings, change the line to either:
+The ``BURNOUT`` variable turns this setting on/off.  To this setting, change
+the line to either:
 
 ``BURNOUT = True``
 
@@ -83,7 +84,17 @@ or
 
 ``BURNOUT = False``
 
-Please note the specific capitalization!
+The second, related configurable setting is ``HOURS_BEFORE_BURNOUT``, and it
+controls how long the candles will stay on before turning off.  For example,
+if you wanted the candles to stay on for 3 hours, you should have the following
+settings:
+
+.. code-block:: python
+
+    BURNOUT = True
+    HOURS_BEFORE_BURNOUT = 3
+
+Please note the specific capitalization of variables and values!
 
 Functionality
 -------------
