@@ -1,7 +1,7 @@
 CircuitPythonukiah
 ==================
 
-.. image:: https://img.shields.io/github/workflow/status/tekktrik/CircuitPythonukiah/Build%20CI/main
+.. image:: https://img.shields.io/github/actions/workflow/status/tekktrik/CircuitPythonukiah/build.yml?branch=main
    :target:  https://github.com/tekktrik/CircuitPythonukiah/actions
    :alt: Build CI status (main branch)
 
