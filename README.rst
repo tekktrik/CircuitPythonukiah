@@ -24,10 +24,11 @@ computer.  The device will show up as a USB drive labelled ``CIRCUITPY``.  In th
 folder you'll find a file named ``secrets.py``, in which you'll need to add a few
 pieces of information.
 
-The first is your Wi-Fi name and password, which the
-CircuitPythonukiah will need to connect to your network.  The other pieec of
-information is your ZIP code, which is needed in order to grab the candle lighting
-times for your location.  An example of this filled out looks like this:
+The first is your Wi-Fi name and password, which the CircuitPythonukiah will need to
+connect to your network.  Please note that this must be a 2.4 GHz network, as it cannot
+use a 5 GHz netork.  The other piece of information needed is your ZIP code, which is
+required in order to grab the candle lighting times for your location.  An example of
+this filled out looks like this:
 
 .. code-block:: python
 
@@ -62,7 +63,7 @@ settings you can configure.  See the section below for what these settings do.
 
 After saving these file with your information, you can unplug from the
 microcontroller and use the USB C cable to plug into the back of the
-CircuitPythonukiah and connect the other end of the cable to a power source,
+CircuitPythonukiah base and connect the other end of the cable to a power source,
 such as a common USB charger brick.
 
 Configurable Settings
@@ -109,18 +110,18 @@ CircuitPythonukiah to the power source to have it retry the connection.
 If conenction is successful, the CircuitPythonukiah should immediately begin
 operating based on the current time relative to candle light.
 
-* If it is before the start of the first Hanukkah light time the device will not
+* If it is before the start of the first Hanukkah light time, the device will not
   light up any LEDs until it's time, at which point the shamash LED and first
   candle will turn on, accompanied by a small rendition of "Maoz Tzur" depending
   on your sound muting settings.
-* If the device is plugged in during the holiday within 12 hours of candle
-  lighting time, it will immediately light up and play the song depending on
+* If the device is plugged in during the holiday within the configured burnout time
+  of candle lighting time, it will immediately light up and play the song depending on
   your sound muting settings.
 * If you plug it in between the end of this time and the next candle lighting
-  time (so, 12 hours before a candle lighting), the device will do anything
-  until the next candle lighting.
-* After the holiday (12 hours after candle light for "burnout" mode or 24 hours
-  otherwise) all the LEDs will turn off and remain as such forever. This means
+  time (so, "HOURS_BEFORE_BURNOUT" hours before a candle lighting), the device will
+  not do anything until the next candle lighting.
+* After the holiday ("HOURS_BEFORE_BURNOUT hours after candle light for "burnout" mode
+  or 24 hours otherwise) all the LEDs will turn off and remain as such forever. This means
   you MUST replug it in every year.
 
 It is worth mentioning that it currently finds the candle lighting times for the
@@ -132,7 +133,7 @@ Troubleshooting
 ---------------
 
 If any point the CircuitPythonukiah cannot retrieve the time from the internet
-as it operates, it is programed to quickly light up the LEDs sequentially to
+as it operates, it is programed to quickly light up the LEDs repeatedly to
 alert you of a problem.  This can be caused by a number of issues but a likely
 cause is that your Wi-Fi network is down.  It is programmed to loop like this
 forever, so if it does not persist after lighting up for only a few sequences,
