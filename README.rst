@@ -69,12 +69,13 @@ such as a common USB charger brick.
 Configurable Settings
 ---------------------
 
-The CircuitPythonukiah currently has two configurable settings relating to
-"burnout". This setting controls the behavior of the device with respect to
-letting the LED candles go out after an amount of time to simulate the behavior
-of regular candles.  This will also let you watch the CircuitPythonukiah fully
-light up the following night.  If this setting is off, the candles will stay on
-until the next candle light, at which point another LED will turn on.
+The CircuitPythonukiah currently has two configurable settings in a file named
+``settings.py`` relating to candle "burnout". This setting controls the behavior
+of the device with respect to letting the LED candles go out after an amount of
+time to simulate the behavior of regular candles.  This will also let you watch
+the CircuitPythonukiah fully light up the following night.  If this setting is
+off, the candles will stay on until the next candle light, at which point another\
+LED will turn on.
 
 The ``BURNOUT`` variable turns this setting on/off.  To this setting, change
 the line to either:
