@@ -139,7 +139,9 @@ alert you of a problem.  This can be caused by a number of issues but a likely
 cause is that your Wi-Fi network is down.  It is programmed to loop like this
 forever, so if it does not persist after lighting up for only a few sequences,
 it's possible that one of the services required by the CircuitPythonukiah was
-temporarily down.
+temporarily down.  If all your Wi-Fi information is correct, you can try unplugging
+it from the power source for a moment, and then replugging it in to have it
+reconnect.
 
 Build, Learn, Share
 -------------------
