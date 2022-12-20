@@ -22,13 +22,13 @@ Setting up the CircuitPythonukiah is simple!  Using a Mirco USB C cable, plug in
 the microcontroller board (the square board on the front) and connect it to your
 computer.  The device will show up as a USB drive labelled ``CIRCUITPY``.  In this
 folder you'll find a file named ``secrets.py``, in which you'll need to add a few
-pieces of information.
+pieces of information.  You can open up this file using any text editor.
 
-The first is your Wi-Fi name and password, which the CircuitPythonukiah will need to
-connect to your network.  Please note that this must be a 2.4 GHz network, as it cannot
-use a 5 GHz netork.  The other piece of information needed is your ZIP code, which is
-required in order to grab the candle lighting times for your location.  An example of
-this filled out looks like this:
+The first bit of information needed is your Wi-Fi name and password, which the
+CircuitPythonukiah will need toconnect to your network.  Please note that this must
+be a 2.4 GHz network, as it cannot use a 5 GHz netork.  The other piece of information
+needed is your ZIP code, which is required in order to grab the candle lighting times
+for your location.  An example of this filled out looks like this:
 
 .. code-block:: python
 
